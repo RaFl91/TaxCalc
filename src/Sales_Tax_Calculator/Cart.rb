@@ -11,7 +11,7 @@ module SalesTaxCalculator
 		def add_items(*items)
 			@items += items
 		end
-
+		
 	end
 
 end

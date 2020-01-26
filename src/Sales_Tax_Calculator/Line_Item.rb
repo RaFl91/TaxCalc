@@ -8,7 +8,7 @@ module SalesTaxCalculator
 			@quantity, @product, @price = quantity, product, price
 		end
 
-		def item
+		def items
 			LineItem.new(quantity, product, price)
 		end
 
