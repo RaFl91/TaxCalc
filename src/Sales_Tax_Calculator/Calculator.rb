@@ -22,7 +22,37 @@ module SalesTaxCalculator
 
 		private
 		
-		def 
+		def tax_basic
+			basic_tax * total
+		end
+
+		def tax_import
+			(basic_tax + import_tax) * total
+		end
+
+		def total
+			quantity * price 
+		end
+
+		def exempt?
+			book? || food? || medical_product?
+		end
+
+		def book?
+			product.include? 'book'
+		end
+
+		def food?
+			product.include? 'food'
+		end
+
+		def medical_product?
+			product.include? 'pill'
+		end
+
+		def imported?
+			product.include? 'imported'
+		end
 
 	end
 
